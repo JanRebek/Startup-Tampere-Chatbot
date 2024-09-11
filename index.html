@@ -5,6 +5,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello!</h1>
+    <div id="chat-container"></div>
+    
+    
+    
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '66608cf10e8c83a85e21deb3' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                  render: {
+          mode: 'embedded',
+          target: document.getElementById('chat-container'),
+      },
+      autostart: false
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
 </body>
 </html>
